@@ -8,6 +8,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <pthread.h>
+#include <sstream>
 
 using namespace std;
 
@@ -16,6 +17,13 @@ pthread_t thread;
 unsigned short port = 8080;        		// 服务器的端口号
 char *server_ip = "127.0.0.1";    	// 服务器ip地址
 
+template <typename T>
+string NumberToString ( T Number )
+{
+     ostringstream ss;
+     ss << Number;
+     return ss.str();
+}
 
 int TCPConnInit( int &sockfd , int port, char *server_ip )
 {
@@ -62,7 +70,7 @@ void* RevMsg( void *cfd )
 	char recv_buf[512] = "";
 	while( recv(connfd, recv_buf, sizeof(recv_buf), 0) > 0 ) // 接收数据
 	{
-		printf("\nrecv data from host %c:\n", recv_buf[0]);
+		printf("\nReceive data from host:\n");
 		printf("%s\n",recv_buf);
 	}
 		
@@ -76,6 +84,7 @@ int main()
 	int sockfd; 
 	string cmd, message;
 	int res;
+	int dest;
 
 	if( TCPConnInit( sockfd, port, server_ip ) < 0 ) {
 		cout << "Can't connect to server, please make sure the server is on" << endl;
@@ -111,6 +120,18 @@ int main()
 	    	if( SendMsg( sockfd, "GetListClient" ) < 0 )
 				break;
 	    } else if ( cmd == "send" ) {
+	    	cout << "\n[Destinantion]";
+			cin >> dest;
+			cout << "\n[Message]";
+			cin >> message;
+
+			int a1 = dest/100;
+			int a2 = ( dest - a1*100 )/10;
+			int a3 = dest - a1*100 - a2*10;
+
+			message = "Send" + NumberToString(a1) + NumberToString(a2) + NumberToString(a3) + message;
+			if( SendMsg( sockfd, message ) < 0 )
+				break;
 
 	    } else if ( cmd == "help" ) {
 	    	cout << "Available command:" << endl;
