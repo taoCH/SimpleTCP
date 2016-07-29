@@ -1,0 +1,40 @@
+[INFO]Bluetooth -Begin to search bluetooth device
+[INFO]Dbus-Connected to system bus
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[ERROR]Dbus-Cannot allocate DBus message
+[ERROR]Dbus-Send DBus message failed
+[INFO]Dbus- No bluetooth device is connected 
+[INFO]Bluetooth -Begin to search bluetooth device
+[INFO]Dbus-Connected to system bus
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[ERROR]Dbus-Cannot allocate DBus message
+[ERROR]Dbus-Send DBus message failed
+[INFO]Dbus- No bluetooth device is connected 
+[INFO]Dbus-Connected to system bus
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[ERROR]Dbus-Cannot allocate DBus message
+[ERROR]Dbus-Send DBus message failed
+[INFO]Dbus- No bluetooth device is connected 
+[INFO]Bluetooth - No Bluetooth device connected
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[INFO]Dbus- New device: 50:C9:71:F9:49:56
+[ERROR]Dbus-org.bluez.Error.AlreadyExists
+[WARN]Dbus- NULL reply
+[INFO]Dbus- Bluetooth Adapter found :/org/bluez/4746/hci0
+[INFO]Dbus- Connected bluetooth device found: /org/bluez/4746/hci0/dev_50_C9_71_F9_49_56
+[INFO]Bluetooth - Connection establish
+[INFO]DBus - Bluetooth device is connected
+[ERROR]FFmpeg-Couldn't open input stream
+[INFO]DBus - Bluetooth device is connected
+[ERROR]mysql_query() : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[INFO]SQL - command executed failed!
+[ERROR]mysql_query() : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR]SQL - command executed failed!
+[ERROR]mysql_query() : Unknown column 'groupId' in 'field list'
+[ERROR]SQL - command executed failed!
+[ERROR]mysql_query() : Unknown column 'groupId' in 'field list'
+[ERROR]SQL - command executed failed!
+[INFO]SQL - command executed successfully!
